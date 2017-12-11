@@ -1,26 +1,31 @@
-// -------------------------------------------------------------------------- //
-// Rendering lists
-// -------------------------------------------------------------------------- //
-
 import React from "react";
 import ReactDOM from "react-dom";
-import products from "./products.json";
+import PropTypes from "prop-types";
 
-class App extends React.Component {
+class SayHello extends React.Component {
+  static propTypes = {
+    firstName: PropTypes.string
+  };
+
   render() {
-
-    return (
-      <ul>
-        {products.map((product) => {
-          return (
-            <li key={product.id}>
-              {product.title}
-            </li>
-          );
-        })}
-      </ul>
-    );
+    const { firstName } = this.props;
+    return <div>Hello {firstName}</div>;
   }
 }
 
-ReactDOM.render(<App firstName={true} />, document.getElementById("root"));
+// class SayHello extends React.Component {
+//   static propTypes = {
+//     firstName(props, propName, componentName) {
+//       if (typeof props[propName] !== "string") {
+//         return Error(`prop: ${propName} needs to be a string`);
+//       }
+//     }
+//   };
+
+//   render() {
+//     const { firstName } = this.props;
+//     return <div>Hello {firstName}</div>;
+//   }
+// }
+
+ReactDOM.render(<SayHello firstName={true} />, document.getElementById("root"));

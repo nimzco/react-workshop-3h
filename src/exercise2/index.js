@@ -1,26 +1,23 @@
 // -------------------------------------------------------------------------- //
-// Ex. 2 Events & setState
+// Creating a component
 // -------------------------------------------------------------------------- //
 
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class Counter extends React.Component {
-  state = {
-    clickCount: 0,
-  };
-
+class LeWorkshop extends React.Component {
   render() {
-    const {clickCount} = this.state;
+    const {nbAttendees} = this.props;
 
     return (
       <div>
-        <h1>Clicked: {clickCount} times</h1>
-        <button>+1</button>
-        <button>Reset</button>
+        LeWorkshop has {nbAttendees} attendees
       </div>
-    );
+    )
   }
 }
 
-ReactDOM.render(<Counter />, document.getElementById('root'));
+ReactDOM.render(
+  <LeWorkshop nbAttendees={20}/>,
+  document.getElementById("root")
+);

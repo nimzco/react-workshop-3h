@@ -1,24 +1,17 @@
 // -------------------------------------------------------------------------- //
-// Rendering lists
+// Prop Types
 // -------------------------------------------------------------------------- //
 
 import React from "react";
 import ReactDOM from "react-dom";
-import products from "./products.json";
 
 class App extends React.Component {
   render() {
-
+    const { firstName, lastName } = this.props;
     return (
-      <ul>
-        {products.map((product) => {
-          return (
-            <li>
-              {product.title}
-            </li>
-          );
-        })}
-      </ul>
+      <div>
+        Hello {firstName}, {lastName}
+      </div>
     );
   }
 }

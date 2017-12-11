@@ -1,28 +1,26 @@
 // -------------------------------------------------------------------------- //
-// Ex. 3 Lifecycle methods
+// Events & setState
 // -------------------------------------------------------------------------- //
 
-import React from "react";
-import ReactDOM from "react-dom";
-import Timer from "./Timer.solution";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-class App extends React.Component {
-  state = { showTimer: false };
-  toggleShow = () => {
-    this.setState({
-      showTimer: !this.state.showTimer
-    });
+class Counter extends React.Component {
+  state = {
+    clickCount: 0,
   };
+
   render() {
-    const { showTimer } = this.state;
+    const {clickCount} = this.state;
+
     return (
       <div>
-        <label>Show Timer</label>
-        <input type="checkbox" onChange={this.toggleShow} checked={showTimer} />
-        {showTimer ? <Timer /> : null}
+        <h1>Clicked: {clickCount} times</h1>
+        <button>+1</button>
+        <button>Reset</button>
       </div>
     );
   }
 }
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<Counter />, document.getElementById('root'));

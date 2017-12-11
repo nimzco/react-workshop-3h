@@ -13,7 +13,7 @@ class App extends React.Component {
       <ul>
         {products.map((product) => {
           return (
-            <li>
+            <li key={product.id}>
               {product.title}
             </li>
           );

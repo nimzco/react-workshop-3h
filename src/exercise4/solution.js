@@ -1,31 +1,36 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import PropTypes from "prop-types";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-class SayHello extends React.Component {
-  static propTypes = {
-    firstName: PropTypes.string
+class Counter extends React.Component {
+  state = {
+    clickCount: 0,
+  };
+
+  incrementCount = () => {
+    const {clickCount} = this.state;
+
+    this.setState({
+      clickCount: clickCount + 1,
+    });
+  };
+
+  resetCount = () => {
+    this.setState({
+      clickCount: 0,
+    });
   };
 
   render() {
-    const { firstName } = this.props;
-    return <div>Hello {firstName}</div>;
+    const {clickCount} = this.state;
+
+    return (
+      <div>
+        <h1>Clicked: {clickCount} times</h1>
+        <button onClick={this.incrementCount}>+1</button>
+        <button onClick={this.resetCount}>Reset</button>
+      </div>
+    );
   }
 }
 
-// class SayHello extends React.Component {
-//   static propTypes = {
-//     firstName(props, propName, componentName) {
-//       if (typeof props[propName] !== "string") {
-//         return Error(`prop: ${propName} needs to be a string`);
-//       }
-//     }
-//   };
-
-//   render() {
-//     const { firstName } = this.props;
-//     return <div>Hello {firstName}</div>;
-//   }
-// }
-
-ReactDOM.render(<SayHello firstName={true} />, document.getElementById("root"));
+ReactDOM.render(<Counter />, document.getElementById('root'));
