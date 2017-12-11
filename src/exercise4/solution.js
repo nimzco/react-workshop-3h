@@ -1,36 +1,50 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+// -------------------------------------------------------------------------- //
+// Lifecycle methods
+// -------------------------------------------------------------------------- //
 
-class Counter extends React.Component {
-  state = {
-    clickCount: 0,
-  };
+import React from "react";
+import ReactDOM from "react-dom";
 
-  incrementCount = () => {
-    const {clickCount} = this.state;
+const PRODUCTS_URL = 'https://www.chubbiesshorts.com/products.json';
 
-    this.setState({
-      clickCount: clickCount + 1,
-    });
-  };
+class App extends React.Component {
+  state = { products: [] }
 
-  resetCount = () => {
-    this.setState({
-      clickCount: 0,
-    });
-  };
+  componentDidMount() {
+    fetch(PRODUCTS_URL)
+      .then((res) => res.json())
+      .then((response) => {
+        this.setState({
+          products: response.products
+        });
+      });
+  }
 
+  renderProducts() {
+    const {products} = this.state;
+    return (
+      <ul>
+        {products.map((product) => {
+          return (
+            <li key={product.id}>
+              {product.title}
+            </li>
+          );
+        })}
+      </ul>
+    );
+  }
   render() {
-    const {clickCount} = this.state;
-
+    const {products} = this.state;
     return (
       <div>
-        <h1>Clicked: {clickCount} times</h1>
-        <button onClick={this.incrementCount}>+1</button>
-        <button onClick={this.resetCount}>Reset</button>
+        {products.length === 0 ?
+          "Loading products..."
+          : this.renderProducts()
+        }
       </div>
     );
   }
 }
 
-ReactDOM.render(<Counter />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));

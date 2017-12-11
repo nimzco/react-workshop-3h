@@ -4,22 +4,15 @@
 
 import React from "react";
 import ReactDOM from "react-dom";
-import Timer from "./Timer.solution";
+
+const PRODUCTS_URL = 'https://www.chubbiesshorts.com/products.json';
 
 class App extends React.Component {
-  state = { showTimer: false };
-  toggleShow = () => {
-    this.setState({
-      showTimer: !this.state.showTimer
-    });
-  };
+
   render() {
-    const { showTimer } = this.state;
     return (
       <div>
-        <label>Show Timer</label>
-        <input type="checkbox" onChange={this.toggleShow} checked={showTimer} />
-        {showTimer ? <Timer /> : null}
+        Loading products...
       </div>
     );
   }
