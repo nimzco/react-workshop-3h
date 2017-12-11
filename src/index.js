@@ -1,2 +1,2 @@
 import './index.css';
-import './exercise3';
+import './exercise6/solution';
