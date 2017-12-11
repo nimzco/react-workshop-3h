@@ -1,7 +1,3 @@
-// -------------------------------------------------------------------------- //
-// Ex. 2 Events & setState
-// -------------------------------------------------------------------------- //
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -10,14 +6,28 @@ class Counter extends React.Component {
     clickCount: 0,
   };
 
+  incrementCount = () => {
+    const {clickCount} = this.state;
+
+    this.setState({
+      clickCount: clickCount + 1,
+    });
+  };
+
+  resetCount = () => {
+    this.setState({
+      clickCount: 0,
+    });
+  };
+
   render() {
     const {clickCount} = this.state;
 
     return (
       <div>
         <h1>Clicked: {clickCount} times</h1>
-        <button>+1</button>
-        <button>Reset</button>
+        <button onClick={this.incrementCount}>+1</button>
+        <button onClick={this.resetCount}>Reset</button>
       </div>
     );
   }
