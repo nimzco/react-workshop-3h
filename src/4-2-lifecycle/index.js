@@ -3,10 +3,9 @@
 // -------------------------------------------------------------------------- //
 
 import React from "react";
-import ReactDOM from "react-dom";
 import Timer from "./Timer.solution";
 
-class App extends React.Component {
+export default class App extends React.Component {
   state = { showTimer: false };
 
   toggleShow = () => {
@@ -26,5 +25,3 @@ class App extends React.Component {
     );
   }
 }
-
-ReactDOM.render(<App />, document.getElementById("root"));

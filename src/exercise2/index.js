@@ -3,7 +3,6 @@
 // -------------------------------------------------------------------------- //
 
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 class LeWorkshop extends React.Component {
   render() {
@@ -17,7 +16,8 @@ class LeWorkshop extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <LeWorkshop nbAttendees={20}/>,
-  document.getElementById("root")
-);
+export default class App extends React.Component {
+  render() {
+    return <LeWorkshop nbAttendees={20}/>
+  }
+}

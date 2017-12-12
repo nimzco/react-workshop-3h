@@ -3,10 +3,9 @@
 // -------------------------------------------------------------------------- //
 
 import React from "react";
-import ReactDOM from "react-dom";
 import products from "./products.json";
 
-class App extends React.Component {
+export default class App extends React.Component {
   render() {
 
     return (
@@ -23,4 +22,3 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App firstName={true} />, document.getElementById("root"));

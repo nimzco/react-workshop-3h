@@ -1,11 +1,14 @@
 // -------------------------------------------------------------------------- //
 // Events & setState
 // -------------------------------------------------------------------------- //
+// Exercice
+//   - When the user clicks on `+1`, increment the `clickCount`
+//   - When the user clicks on `Reset` resets the `clickCount`
+//   - Bonus: When the click counts is > 10, show a special message
 
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-class Counter extends React.Component {
+export default class Counter extends React.Component {
   state = {
     clickCount: 0,
   };
@@ -23,4 +26,3 @@ class Counter extends React.Component {
   }
 }
 
-ReactDOM.render(<Counter />, document.getElementById('root'));
