@@ -2,18 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '@shopify/polaris/styles.css';
 import './index.css';
-import {Tabs, Page, Card} from '@shopify/polaris';
+import {Tabs, Page, Card, Select} from '@shopify/polaris';
 
 const ROUTES = {
   'Events & SetState': require('./Events-set-state').default,
   'Lifecycle methods 1': require('./Lifecycle-mount').default,
   'Lifecycle methods 2': require('./Lifecycle-unmount').default,
   'Lists': require('./Lists').default,
-  'Lifting State Up': require('./6-lifting-state-up').default,
+  'Lifting State Up': require('./Lifting-state-up').default,
 };
 
 class App extends React.Component {
-  state = {routeIndex: 0, selectedTab: 0}
+  state = {routeIndex: 'Events & SetState', selectedTab: 0}
 
   handleTabSelect = (tab) => {
     this.setState({
@@ -23,25 +23,18 @@ class App extends React.Component {
 
   render() {
     const {routeIndex, selectedTab} = this.state;
-    const Route = ROUTES[Object.keys(ROUTES)[routeIndex]];
+    const Route = ROUTES[routeIndex];
 
     return (
       <Page>
         <div>
-          <ul className="list">
-            {Object.keys(ROUTES).map((name, index) => {
-              return (
-                <li
-                  key={name}
-                  className={routeIndex === index ? 'list__link list__link--active' : 'list__link'}
-                >
-                  <a onClick={() => this.setState({routeIndex: index})}>
-                    {name}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
+          <Select
+            label="Exercises"
+            value={routeIndex}
+            options={Object.keys(ROUTES)}
+            placeholder="Select"
+            onChange={(index) => this.setState({routeIndex: index})}
+          />
         </div>
         <Card>
           <Card.Section>
@@ -60,7 +53,7 @@ class App extends React.Component {
               ]}
             >
               <div className="tab-content">
-                {selectedTab === 0 ? <Route /> : <SolutionRoute/>}
+                {selectedTab === 0 ? <Route /> : null}
               </div>
             </Tabs>
           </Card.Section>

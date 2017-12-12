@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import SearchInput from "./SearchInput";
 import ProductList from "./ProductList";
-import products from "./products.json";
+import {products} from "./products.js";
 
 class App extends React.Component {
   state = {

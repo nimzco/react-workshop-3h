@@ -1,7 +1,7 @@
 import React from "react";
 import SearchInput from "./SearchInput";
 import ProductList from "./ProductList";
-import products from "./products.json";
+import {products} from "./products.js";
 
 export default class App extends React.Component {
   render() {
