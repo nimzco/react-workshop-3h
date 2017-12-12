@@ -3,7 +3,7 @@
 // -------------------------------------------------------------------------- //
 
 import React from "react";
-import products from "./products.json";
+import {products} from "./products.json";
 
 export default class App extends React.Component {
   render() {

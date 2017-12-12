@@ -5,10 +5,10 @@ import './index.css';
 import {Tabs, Page, Card} from '@shopify/polaris';
 
 const ROUTES = {
-  'Events & SetState': require('./3-events-set-state').default,
-  'Lifecycle methods 1': require('./4-1-lifecycle').default,
-  'Lifecycle methods 2': require('./4-2-lifecycle').default,
-  'Lists': require('./5-lists').default,
+  'Events & SetState': require('./Events-set-state').default,
+  'Lifecycle methods 1': require('./Lifecycle-mount').default,
+  'Lifecycle methods 2': require('./Lifecycle-unmount').default,
+  'Lists': require('./Lists').default,
   'Lifting State Up': require('./6-lifting-state-up').default,
 };
 
@@ -60,7 +60,7 @@ class App extends React.Component {
               ]}
             >
               <div className="tab-content">
-                {selectedTab === 0 ? <Route /> : 'lol'}
+                {selectedTab === 0 ? <Route /> : <SolutionRoute/>}
               </div>
             </Tabs>
           </Card.Section>

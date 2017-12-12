@@ -1,4 +1,4 @@
-[
+export const products = [
   {
      "id":9823175489,
      "title":"The Stonehenges (7\" Stretch)",
@@ -6088,4 +6088,4 @@
         }
      ]
   }
-]
+];
