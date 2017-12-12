@@ -8,7 +8,9 @@ import ReactDOM from "react-dom";
 const PRODUCTS_URL = 'https://www.chubbiesshorts.com/products.json';
 
 class App extends React.Component {
-  state = { products: [] }
+  state = {
+    products: [],
+  };
 
   componentDidMount() {
     fetch(PRODUCTS_URL)
@@ -39,8 +41,8 @@ class App extends React.Component {
     const {products} = this.state;
     return (
       <div>
-        {products.length === 0 ?
-          "Loading products..."
+        {products.length === 0
+          ? "Loading products..."
           : this.renderProducts()
         }
       </div>
