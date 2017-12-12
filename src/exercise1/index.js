@@ -34,16 +34,16 @@ rootNode.appendChild(element);
 // checking out the output produced by Babel: https://goo.gl/64yWVP
 // -------------------------------------------------------------------------- //
 
-import React from "react";
-import ReactDOM from "react-dom";
+// import React from "react";
+// import ReactDOM from "react-dom";
 
-const element = (
-  <div className="container">
-    Hello World
-  </div>
-);
+// const element = (
+//   <div className="container">
+//     Hello World
+//   </div>
+// );
 
-ReactDOM.render(element, document.getElementById('root'));
+// ReactDOM.render(element, document.getElementById('root'));
 
 
 // -------------------------------------------------------------------------- //
