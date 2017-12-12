@@ -34,6 +34,7 @@ class App extends React.Component {
       </ul>
     );
   }
+
   render() {
     const {products} = this.state;
     return (
