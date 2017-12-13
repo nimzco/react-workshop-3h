@@ -12,6 +12,7 @@ const routes = [
   {id: 'lifting-state-up', label: '6 - Lifting state up', component: require('./6-Lifting-state-up').default, showSolution: true},
   {id: 'refs', label: '7 - Refs', component: require('./7-Refs').default, showSolution: true},
   {id: 'forms', label: '8 - Forms', component: require('./8-Forms').default, showSolution: true},
+  {id: 'context', label: '9 - Context', component: require('./9-Context').default, showSolution: true},
 ];
 
 ReactDOM.render(
