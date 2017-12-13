@@ -11,6 +11,7 @@ const routes = [
   // {id: 'lists', label: 'Lists', component: require('./Lists').default, showSolution: true},
   {id: 'refs', label: 'Using Refs', component: require('./Refs').default, showSolution: true},
   // {id: 'lifting-state-up', label: 'Lifting State Up', component: require('./Lifting-state-up').default, showSolution: true},
+  {id: 'forms', label: 'Forms', component: require('./Forms').default, showSolution: true},
 ];
 
 ReactDOM.render(
