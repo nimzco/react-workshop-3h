@@ -2,6 +2,10 @@ import React from "react";
 import SearchInput from "./SearchInput";
 import ProductList from "./ProductList";
 
+function Title({children}) {
+  return (<h2>{children}</h2>);
+}
+
 export default class App extends React.Component {
   state = {
     products: [],
@@ -23,10 +27,10 @@ export default class App extends React.Component {
 
     return (
       <div>
-        <h2>Shopping Bag</h2>
+        <Title>Shopping Bag</Title>
         <ProductList products={[]} />
         <hr />
-        <h2>Products</h2>
+        <Title>Products</Title>
         <SearchInput />
         <ProductList products={[]} />
       </div>

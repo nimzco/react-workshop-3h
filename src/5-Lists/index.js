@@ -4,16 +4,19 @@
 
 import React from "react";
 
+function Title({children}) {
+  return (<h1>{children}</h1>);
+}
+
 export default class App extends React.Component {
   state = {
     products: [],
   };
 
   componentDidMount() {
-    fetch('https://www.kyliecosmetics.com/products.json')
+    fetch('https://velvetmoustache.ca/products.json?limit=10')
       .then((response) => response.json())
       .then((response) => {
-        console.log(response.products)
         this.setState({
           products: response.products,
         });
@@ -22,11 +25,14 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <ul>
-        <li>
-          List all the products here
-        </li>
-      </ul>
+      <div>
+        <Title>List of products</Title>
+        <ul className="products">
+          <li>
+            List all the products here
+          </li>
+        </ul>
+      </div>
     );
   }
 }
