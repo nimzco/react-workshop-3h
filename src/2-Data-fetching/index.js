@@ -11,7 +11,7 @@
 
 import React from "react";
 
-const PRODUCTS_URL = 'https://www.chubbiesshorts.com/products.json';
+const PRODUCTS_URL = 'https://velvetmoustache.ca/products.json';
 
 export default class App extends React.Component {
   render() {
