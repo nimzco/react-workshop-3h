@@ -1,3 +1,11 @@
+// ------------------------------------------------------------------- //
+//  Refs and components
+// ------------------------------------------------------------------- //
+//  Objectives:
+// • Use refs to access the underlying component instances
+// • Recognize why relying on component refs to imperatively trigger
+//   updates in our app is an anti-pattern
+
 import React from "react";
 import SearchInput from "./SearchInput";
 import ProductList from "./ProductList";

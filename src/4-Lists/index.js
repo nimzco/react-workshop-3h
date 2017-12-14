@@ -1,12 +1,11 @@
-// -------------------------------------------------------------------------- //
-// Rendering lists
-// -------------------------------------------------------------------------- //
+// ------------------------------------------------------------------- //
+//  Rendering lists of data in React
+// ------------------------------------------------------------------- //
+//  Objectives:
+// • Using Array.prototype.map to render lists of data in React
+// • Recognize how the `key` prop works and why it is required
 
 import React from "react";
-
-function Title({children}) {
-  return (<h1>{children}</h1>);
-}
 
 export default class App extends React.Component {
   state = {
@@ -26,7 +25,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <Title>List of products</Title>
+        <h1>List of products</h1>
         <ul className="products">
           <li>
             List all the products here

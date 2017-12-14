@@ -1,10 +1,10 @@
 // -------------------------------------------------------------------------- //
 // Events & setState
 // -------------------------------------------------------------------------- //
-// Exercice
-//   - When the user clicks on `+1`, increment the `clickCount`
-//   - When the user clicks on `Reset` resets the `clickCount`
-//   - Bonus: When the click counts is > 10, show a special message
+//  Instructions
+// • When the user clicks on `+1`, increment the `clickCount`
+// • When the user clicks on `Reset` resets the `clickCount`
+// • Bonus: When the click counts is > 10, show a special message
 
 import React from 'react';
 

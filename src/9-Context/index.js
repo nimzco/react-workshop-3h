@@ -1,6 +1,17 @@
-// -------------------------------------------------------------------------- //
-// Using context to transparently pass data down to deeply nested components
-// -------------------------------------------------------------------------- //
+// ------------------------------------------------------------------- //
+//  Context
+// ------------------------------------------------------------------- //
+//  Context is used to transparently pass data down the component tree
+//  to deeply nested child components.
+//
+//  Objectives:
+// • Understand how to use context
+// • Recgonize why not to use context in certain situations
+//
+//  Instructions:
+// • Annotate components using the childContextTypes and contextTypes static properties
+// • Populate context values using the getChildContext method
+// • Update component implementation to rely on context instead of props
 
 import React from 'react';
 import PropTypes from 'prop-types';
