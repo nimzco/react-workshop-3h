@@ -10,7 +10,7 @@ const routes = [
   {id: 'lists', label: '4 - Lists', component: require('./4-Lists').default, showSolution: true},
   {id: 'refs', label: '5 - Refs and the DOM', component: require('./5-Refs-and-the-dom').default, showSolution: true},
   {id: 'refs', label: '6 - Component Refs', component: require('./6-Component-refs').default},
-  {id: 'lifting-state-up', label: '7 - Communicating between components', component: require('./7-Communicating-between-components').default, showSolution: true},
+  {id: 'lifting-state-up', label: '7 - Communicating between components', component: require('./7-Component-communication').default, showSolution: true},
   {id: 'forms', label: '8 - Forms', component: require('./8-Forms').default, showSolution: true},
   {id: 'context', label: '9 - Context', component: require('./9-Context').default, showSolution: true},
   {id: 'context', label: '10 - Higher-order Components', component: require('./10-Higher-order-components').default},
