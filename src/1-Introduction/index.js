@@ -1,10 +1,6 @@
 // -------------------------------------------------------------------------- //
 // Introduction to Rendering in react
 // -------------------------------------------------------------------------- //
-// For this introduction, we invite you to head over to a separate sandbox
-// we have set up to walk you through the fundamentals of how to render
-// elements in React.
-//
 //  Objectives:
 // • Using the `React.createElement` API to render a basic Hello World example
 // • Understand how JSX is transpiled into React.createElement calls (using Babel)
@@ -14,7 +10,16 @@
 import React from 'react';
 
 export default () => (
-  <a href="https://codesandbox.io/s/j7wn0xnp29" target="_blank">
-    Go to Introduction sandbox
-  </a>
+  <div>
+    <h1>Rendering in React</h1>
+    <p>
+      For this introduction, we invite you to head over to a separate sandbox
+      we have set up to walk you through the fundamentals of how to render
+      elements in React.
+    </p>
+    <br/>
+    <a href="https://codesandbox.io/s/j7wn0xnp29" target="_blank">
+      <button>Go to Introduction sandbox</button>
+    </a>
+  </div>
 );
