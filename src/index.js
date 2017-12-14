@@ -4,16 +4,16 @@ import WorkshopBoilerplate from 'react-workshop-solutions';
 import "react-workshop-solutions/styles.css";
 
 const routes = [
-  {id: 'introduction', label: '1 - Introduction', component: require('./1-Introduction').default},
-  {id: 'events-state', label: '2 - Events set state', component: require('./2-Events-set-state').default, showSolution: true},
-  {id: 'lifecycle-mount', label: '3 - Data fetching', component: require('./3-Data-fetching').default, showSolution: true},
-  {id: 'lists', label: '4 - Lists', component: require('./4-Lists').default, showSolution: true},
-  {id: 'refs', label: '5 - Refs and the DOM', component: require('./5-Refs-and-the-dom').default, showSolution: true},
-  {id: 'refs', label: '6 - Component Refs', component: require('./6-Component-refs').default},
-  {id: 'lifting-state-up', label: '7 - Communicating between components', component: require('./7-Component-communication').default, showSolution: true},
-  {id: 'forms', label: '8 - Forms', component: require('./8-Forms').default, showSolution: true},
-  {id: 'context', label: '9 - Context', component: require('./9-Context').default, showSolution: true},
-  {id: 'context', label: '10 - Higher-order Components', component: require('./10-Higher-order-components').default},
+  {id: 'introduction', label: '0 - Introduction', component: require('./0-Introduction').default},
+  {id: 'events-state', label: '1 - Events set state', component: require('./1-Events-set-state').default, showSolution: true},
+  {id: 'lifecycle-mount', label: '2 - Data fetching', component: require('./2-Data-fetching').default, showSolution: true},
+  {id: 'lists', label: '3 - Lists', component: require('./3-Lists').default, showSolution: true},
+  {id: 'refs', label: '4 - Refs and the DOM', component: require('./4-Refs-and-the-dom').default, showSolution: true},
+  {id: 'refs', label: '5 - Component Refs', component: require('./5-Component-refs').default},
+  {id: 'lifting-state-up', label: '6 - Communicating between components', component: require('./6-Component-communication').default, showSolution: true},
+  {id: 'forms', label: '7 - Forms', component: require('./7-Forms').default, showSolution: true},
+  {id: 'context', label: '8 - Context', component: require('./8-Context').default, showSolution: true},
+  {id: 'higher-order-components', label: '9 - Higher-order Components', component: require('./9-Higher-order-components').default},
 ];
 
 ReactDOM.render(
