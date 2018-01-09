@@ -22,3 +22,18 @@ export default class App extends React.Component {
     );
   }
 }
+
+/*
+ * Returns a promise that will resolve with an Array of Products:
+ *   Product: {id: ..., title: ..., handle: ..., ...}
+ *   Eg.: https://velvetmoustache.ca/products.json
+ * Usage:
+ *  fetchData().then( (products) => ... )
+ */
+function fetchData() {
+  return fetch(PRODUCTS_URL)
+    .then((res) => res.json())
+    .then((response) => {
+      return response.products;
+    });
+}
