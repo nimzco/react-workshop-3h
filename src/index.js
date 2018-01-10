@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom';
 import WorkshopBoilerplate from 'react-workshop-solutions';
 import "react-workshop-solutions/styles.css";
 
+// You can ignore this file and jump to the `0 - Introduction` folder
+
 const routes = [
   {id: 'introduction', label: '0 - Introduction', component: require('./0-Introduction').default},
-  {id: 'events-state', label: '1 - Events set state', component: require('./1-Events-set-state').default, showSolution: true},
+  {id: 'events-state', label: '1 - Events & State', component: require('./1-Events-set-state').default, showSolution: true},
   {id: 'lifecycle-mount', label: '2 - Data fetching', component: require('./2-Data-fetching').default, showSolution: true},
   {id: 'refs', label: '3 - Refs', component: require('./3-Refs').default, showSolution: true},
   {id: 'refs-2', label: '4 - Communicating between components', component: require('./4-Component-communication').default},
