@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import WorkshopBoilerplate from 'react-workshop-solutions';
 import "react-workshop-solutions/styles.css";
 
-// You can ignore this file and jump to the `0 - Introduction` folder
+// You can ignore this file and jump to the `1 - Events & State` folder
 
 const routes = [
   {id: 'events-state', label: '1 - Events & State', component: require('./1-Events-set-state').default, showSolution: true},
