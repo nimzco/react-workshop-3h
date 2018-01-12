@@ -11,7 +11,7 @@ const routes = [
   {id: 'refs', label: '3 - Refs', component: require('./3-Refs').default, showSolution: true},
   {id: 'refs-2', label: '4 - Communicating between components', component: require('./4-Component-communication').default},
   {id: 'forms', label: '5 - Forms', component: require('./5-Forms').default, showSolution: true},
-  {id: 'context', label: '6 - Context', component: require('./6-Context').default, showSolution: true},
+  {id: 'ts', label: '6 - TypeScript + React', component: require('./6-TypeScript').default},
   {id: 'higher-order-components', label: '7 - Higher-order Components', component: require('./7-Higher-order-components').default},
 ];
 
