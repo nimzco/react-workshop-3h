@@ -5,26 +5,35 @@
 // • Manage forms by using event listeners and component state
 // • Identify the difference between controlled and uncontrolled inputs
 
-
 import React from "react";
 
-export default class Solution extends React.Component {
+export default class FormExercise extends React.Component {
   state = {};
 
   render() {
     return (
       <div>
-        <code>
-          {JSON.stringify(this.state)}
-        </code>
+        <PrettyPrint value={this.state} />
+
         <form>
-          <input type="text" name="company" placeholder="Company" />
-          <input type="text" name="name" placeholder="Name" />
+          <input type="text" name="title" placeholder="Title" />
           <textarea name="message" placeholder="message" />
-          <small>Number of characters remaining: ?</small>
+          <small>Number of characters remaining: 100</small>
+          <input type="number" name="price" placeholder="Price" min={0} />
+          <label><input type="checkbox" name="taxable"/> Taxable</label>
           <button type="submit">Submit</button>
         </form>
       </div>
     );
   }
+}
+
+// You also create React Components using functions
+// instead of classes if they don't have any state.
+function PrettyPrint(props) {
+  return (
+    <code>
+      {JSON.stringify(props.value, null, 2)}
+    </code>
+  );
 }
