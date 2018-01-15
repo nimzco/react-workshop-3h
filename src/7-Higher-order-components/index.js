@@ -4,56 +4,28 @@
 //  A higher-order component is a function that takes a component as
 //  its argument and returns a new, enhanced component.
 //
-//  Objectives:
-// • Recognize when to use the Higher-order component pattern
-// • Identify some of the downsides of relying on HOCs
-// • Recall alternative patterns that can be used instead of HOCs
+//  Instructions:
+// • Create a higher-order component function that takes a component
+//   as it's argument and enhances it by passing it the `localeData`
+//   information as props
 
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function withLocaleData(WrappedComponent) {
-  return class extends React.Component {
-    static childContextTypes = {
-      currency: PropTypes.string,
-      locale: PropTypes.string,
-    };
-
-    getChildContext() {
-      return {
-        currency: 'CAD',
-        locale: 'en-CA',
-      };
-    }
-
-    render() {
-      return <WrappedComponent {...this.props} />;
-    }
-  }
-}
-
-class App extends React.Component {
-  render() {
-    return (
-      <ul>
-        <li><Price value={20} /></li>
-        <li><Price value={15} /></li>
-      </ul>
-    );
-  }
-}
-
-export default withLocaleData(App);
+const localeData = {
+  currency: 'CAD',
+  locale: 'en-CA',
+};
 
 class Price extends React.Component {
-  static contextTypes = {
-    currency: PropTypes.string,
-    locale: PropTypes.string,
+  static propTypes = {
+    currency: PropTypes.string.isRequired,
+    locale: PropTypes.string.isRequired,
+    value: PropTypes.number.isRequired,
   };
 
   render() {
-    const {value} = this.props;
-    const {locale, currency} = this.context;
+    const {value, locale, currency} = this.props;
     const localizedPrice = value.toLocaleString(locale, {
       style: 'currency',
       currency,
@@ -66,3 +38,18 @@ class Price extends React.Component {
     );
   }
 }
+
+// Once you've created your HOC, store a reference to your new
+// enhanced Price component and update the JSX tags below to use it
+class Exercise extends React.Component {
+  render() {
+    return (
+      <ul>
+        <li><Price value={20} currency="CAD" locale="en-CA" /></li>
+        <li><Price value={15} currency="CAD" locale="en-CA" /></li>
+      </ul>
+    );
+  }
+}
+
+export default Exercise;
