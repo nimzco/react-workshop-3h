@@ -17,7 +17,7 @@ export default class FormExercise extends React.Component {
 
         <form>
           <input type="text" name="title" placeholder="Title" />
-          <textarea name="message" placeholder="message" />
+          <textarea name="description" placeholder="description" />
           <small>Number of characters remaining: 100</small>
           <input type="number" name="price" placeholder="Price" min={0} />
           <label><input type="checkbox" name="taxable"/> Taxable</label>
